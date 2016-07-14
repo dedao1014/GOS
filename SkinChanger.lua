@@ -521,7 +521,7 @@ OnDraw(function()
     end
 end)
 
-Config = Menu("Skin Changer & Auto-leveler", "Skinchanger")
+Config = Menu("Skin Changer & Auto-leveler", "皮肤菜单")
 Config:DropDown('skin', GetObjectName(myHero).. " Skins", 0, skinMeta[GetObjectName(myHero)], HeroSkinChanger, true)
 Config.skin:Value(0)
 Config.skin.callback = function(model) HeroSkinChanger(GetMyHero(), model - 1) displayBubble(2, {skinMeta[GetObjectName(myHero)][model] .." ".. GetObjectName(myHero) .. " Loaded!"}) end
